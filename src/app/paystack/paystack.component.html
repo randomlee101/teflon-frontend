@@ -1,0 +1,17 @@
+<div class="bg-teal-900 w-screen h-screen flex justify-center items-center">
+    <div action="" class=" w-3/4">
+        <div class="text-4xl text-white mb-6">
+            Bank Transfer
+        </div>
+        <input type="text" class=" rounded-sm block mb-4 w-full" placeholder="Email" [formControl]="email">
+        <input type="text" class=" rounded-sm block mb-4 w-full" placeholder="Amount" [formControl]="amount">
+        <input type="text" class=" rounded-sm block mb-4 w-full" placeholder="Transaction Reference" [formControl]="transaction_reference">
+        <select type="text" [formControl]="currency" class=" rounded-sm block mb-4 w-full" value="Currency">
+            <option value="NGN">NGN</option>
+            <option value="GHC">GHC</option>
+        </select>
+        <div class="text-white">{{email.value}}</div>
+        <!-- <input type="text" class=" rounded-sm block mb-4 w-full" placeholder="Email"> -->
+        <button class=" content-center bg-teal-500 w-full py-4 shadow-sm rounded-sm text-gray-700 outline-none hover:translate-y-4 hover:bg-gray-700 hover:text-white" (click) = "transfer()">Transfer</button>
+    </div>    
+</div>
