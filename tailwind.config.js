@@ -6,7 +6,7 @@ module.exports = {
     prefix: '',
     mode: 'jit',
     purge: {
-      enabled: true,
+      enabled: false,
       layers: ['components','utilities','base'],
       content: [
         './src/**/*.{html,ts,css,scss,sass,less,styl}',
