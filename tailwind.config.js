@@ -6,10 +6,12 @@ module.exports = {
     prefix: '',
     mode: 'jit',
     purge: {
-      enabled: false,
+      enabled: true,
+      mode: 'layers',
       layers: ['components','utilities','base'],
+      preserveHtmlElements: true,
       content: [
-        './src/**/*.{html,ts,css,scss,sass,less,styl}',
+        // './src/**/*.{html,ts,css,scss,sass,less,styl}',
       ]
     },
     darkMode: 'class', // or 'media' or 'class'
