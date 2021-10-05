@@ -1,0 +1,25 @@
+<div class=" mx-auto container min-w-screen min-h-screen space-y-2 flex flex-col items-center justify-center">
+    <div class="shadow-sm rounded-md w-3/4 bg-gray-300 p-6 space-y-2">
+        <div class="text-2xl font-semibold">Invoice</div>
+        <hr class="bg-white h-2">
+        <div class="flex justify-between items-center">
+            <div class="text-md font-bold">Amount Due</div>
+            <div class=" text-gray-800">10</div>
+        </div>
+        <div class="flex justify-between items-center">
+            <div class="text-md font-bold">Amount Paid</div>
+            <div class=" text-gray-800">0</div>
+        </div>
+        <div class="flex justify-between items-center">
+            <div class="text-md font-bold">Transaction ID</div>
+            <div class=" text-gray-800">1234567890</div>
+        </div>
+        <div class="flex justify-between items-center">
+            <div class="text-md font-bold">Description</div>
+            <div class=" text-gray-800">Payment for New Shoes</div>
+        </div>
+    </div>
+    <div (click)="payWithPayStack()" class=" cursor-pointer bg-teal-500 shadow-sm rounded-md w-3/4 p-4 hover:shadow-md hover:bg-teal-700">
+        <p class="text-center text-white font-semibold">Pay using PayStack</p>
+    </div>
+</div>
