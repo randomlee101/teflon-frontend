@@ -8,8 +8,8 @@ export class PaystackService {
 
   constructor(private readonly http: HttpClient) { }
 
-  sendRequest (body: any)
+  getAllBanks ()
   {
-     return this.http.post("https://teflon-hub.herokuapp.com/api/v1/paystack/make_payment", body, {headers: {"Authorization": `Basic ${btoa(`teflon:newuser`)}`}});
+     return this.http.get("https://teflon-hub.herokuapp.com/api/v1/paystack/banks", {headers: {"Authorization": `Basic ${btoa(`teflon:newuser`)}`}});
   }
 }

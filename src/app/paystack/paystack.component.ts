@@ -9,13 +9,33 @@ import { PaystackService } from '../paystack.service';
 })
 export class PaystackComponent implements OnInit {
 
+  listOfBanks:any = []
 
-  constructor() {
+  inputs: any = [
+    {
+      type: "text",
+      placeholder: "Account Number"
+    },
+    {
+      type: "select",
+      placeholder: "Bank Name",
+      options: this.listOfBanks
+    },
+    {
+      type: "select",
+      placeholder: "Currency",
+      options: [
+        "NGN","GHC"
+      ]
+    }
+  ]
+
+  constructor(private repo: PaystackService) {
 
   }
 
   ngOnInit() {
-
+    this.repo.getAllBanks().subscribe(e => console.log(e))
   }
 
 }

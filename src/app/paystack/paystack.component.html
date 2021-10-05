@@ -1,0 +1,11 @@
+<div *ngFor="let i of inputs">
+    <div *ngIf="i.type == 'select'; else other">
+        <select [value]="i.placeholder">
+            <option *ngFor="let o of i.options">{{o}}</option>
+        </select>
+    </div>
+    <ng-template #other>
+        <input type="text">
+    </ng-template>
+
+</div>
