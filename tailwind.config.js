@@ -4,7 +4,7 @@ process.env.TAILWIND_MODE = guessProductionMode() ? 'build' : 'watch';
 
 module.exports = {
 
-    prefix: '',
+    prefix: 'tw',
     mode: 'jit',
     purge: {
       enabled: process.env.PURGE_CSS === 'production' ? true : false,
