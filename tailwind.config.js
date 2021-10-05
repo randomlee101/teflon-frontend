@@ -3,8 +3,6 @@ const { guessProductionMode } = require("@ngneat/tailwind");
 process.env.TAILWIND_MODE = guessProductionMode() ? 'build' : 'watch';
 
 module.exports = {
-
-    prefix: 'tw',
     mode: 'jit',
     purge: {
       enabled: process.env.PURGE_CSS === 'production' ? true : false,
@@ -19,5 +17,5 @@ module.exports = {
     variants: {
       extend: {},
     },
-    plugins: [require('@tailwindcss/forms'),require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/forms')],
 };
