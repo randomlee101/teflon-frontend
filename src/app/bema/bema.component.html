@@ -1,1 +1,11 @@
-<p>bema works!</p>
+<div class="flex flex-col justify-center items-center h-screen space-y-5">
+    <div class="text-2xl font-semibold">
+        Bank Transfer
+    </div>
+    <input type="text" placeholder="Enter Merchant's Email" class="w-3/4" [formControl]="email" required>
+    <div class="p-4 rounded-sm shadow-sm bg-green-500 w-3/4" (click)="completeTransfer()">
+        <div class="text-white text-center">
+            Proceed
+        </div>
+    </div>
+</div>

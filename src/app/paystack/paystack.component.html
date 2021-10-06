@@ -1,11 +1,17 @@
-<div *ngFor="let i of inputs">
-    <div *ngIf="i.type == 'select'; else other">
-        <select [value]="i.placeholder">
-            <option *ngFor="let o of i.options">{{o}}</option>
-        </select>
+<div class="container mx-auto h-screen space-y-5 flex flex-col justify-center">
+    <div class="text-2xl font-semibold">Pay with PayStack</div>
+    <div *ngFor="let i of inputs" class="w-full">
+        <div *ngIf="i.type == 'select'; else other" class="w-full">
+                <select class="w-full" #mySelect (change)="printCode(mySelect.value)">
+                    <option *ngFor="let o of i.options" [value]="o.code" [selected]="o.code === '000'">{{o.name}}</option>
+                </select>
+        </div>
+        <ng-template #other>
+            <input type="text" [placeholder]="i.placeholder" class="w-full">
+        </ng-template>
+    
     </div>
-    <ng-template #other>
-        <input type="text">
-    </ng-template>
-
+    <div class="bg-green-500 p-4 rounded-lg shadow-lg hover:shadow-2xl mx-4" (click)="toFailedPage()">
+        <div class="text-white text-center">Verify</div>
+    </div>
 </div>

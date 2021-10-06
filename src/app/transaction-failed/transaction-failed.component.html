@@ -1,1 +1,9 @@
-<p>transaction-failed works!</p>
+<div class="flex flex-col justify-center items-center h-screen space-y-5">
+    <div class="text-4xl text-red-600 font-semibold">PayStack Payment Failed</div>
+    <div class="text-2xl">Would you like to try Bank Transfer?</div>
+    <div class="shadow-md p-4 bg-green-500 rounded-sm" (click)="proceedToBankTransfer()">
+        <div class="text-center text-white">
+            Proceed to BemaSwitch Bank Transfer
+        </div>
+    </div>
+</div>

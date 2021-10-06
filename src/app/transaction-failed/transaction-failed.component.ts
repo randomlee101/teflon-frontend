@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-transaction-failed',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionFailedComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private router: Router) { }
+
+  proceedToBankTransfer()
+  {
+    this.router.navigateByUrl('/bema')
+  }
 
   ngOnInit(): void {
   }
